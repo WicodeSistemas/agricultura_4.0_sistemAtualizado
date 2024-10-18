@@ -1,0 +1,97 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Campo Agrícola */
+#campo {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    background-image: url('assets/images/campo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Imagem do campo */
+#campoImagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Ocultando a imagem, pois o background já está definido */
+}
+
+/* Sensores */
+.sensor {
+    width: 100px;
+    height: 50px;
+    background-color: #FF5722;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: grab;
+    border-radius: 5px;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+.sensor:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+}
+
+/* Gráficos */
+.graficos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.grafico {
+    width: 500px;
+    margin: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+canvas {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ddd;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
